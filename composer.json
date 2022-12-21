@@ -1,0 +1,24 @@
+{
+    "name": "duynv/baokim-sdk",
+    "description": "BaoKim SDK",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Duynv\\BaokimSdk\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Duynv",
+            "email": "duynv1499@gmail.com"
+        }
+    ],
+    "require": {
+        "composer-plugin-api": "^2.0",
+        "guzzlehttp/guzzle": "^7.5",
+        "firebase/php-jwt": "^6.3"
+    },
+    "extra": {
+        "class": "App\\Connect"
+    }
+}
