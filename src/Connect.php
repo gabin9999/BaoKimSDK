@@ -2,6 +2,7 @@
 
 namespace Duynv\BaokimSdk;
 
+use Duynv\BaokimSdk\Helpers\Common;
 use Firebase\JWT\JWT;
 use GuzzleHttp\Client;
 
