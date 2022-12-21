@@ -1,9 +1,8 @@
 <?php
 
-namespace Duynv\BaokimSdk;
+namespace Duynv\BaokimSdk\Helpers;
 
 use GuzzleHttp\Client;
-use Illuminate\Support\Facades\Log;
 
 class Common {
 
