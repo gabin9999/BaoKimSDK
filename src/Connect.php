@@ -22,9 +22,13 @@ class Connect {
             $rs = $Common->requestAPI('POST', API_URL.'/payment/api/v5/order/send', $header, [], $data);
             $responseMassage = $rs->body->message;
             $dataRespone = [
-                'responseCode' => 99,
+                'responseCode' => 01,
                 'responseMessage' => ($responseMassage) ? $responseMassage[0] : ''
             ];
+            if ($rs->body->code == 0) {
+                $dataRespone['data']['order_id'] = $rs->body->data->order_id;
+                $dataRespone['data']['paymentUrl'] = $rs->body->data->payment_url;
+            }
             return $dataRespone;
         } catch (\Exception $e) {
             return $e->getMessage();
