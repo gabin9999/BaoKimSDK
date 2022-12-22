@@ -10,8 +10,8 @@ class Connect {
 
     const ERR_NONE = 0;
     protected $merchantId = 400734;
-    protected $apiKey = 'iIcJMU32wzuemkQUZ495CXvqnhnxKdR0';
-    protected $apiSecret = 'D8BB7icFvOTgQ9xgS2li0OufgWnDQLMm';
+    protected $apiKey = '';
+    protected $apiSecret = '';
     protected $apiUrl = 'https://dev-api.baokim.vn';
     protected $_jwt;
     const TOKEN_EXPIRE = 600;
