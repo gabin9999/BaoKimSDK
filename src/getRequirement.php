@@ -34,13 +34,6 @@ class getRequirement {
     public static function getToken(){
         if(!self::$_jwt)
             self::refreshToken(self::$apiKey, self::$apiSecret);
-
-        try {
-            JWT::decode(self::$_jwt, self::$apiSecret, array('HS256'));
-        }catch(Exception $e){
-            self::refreshToken(self::$apiKey, self::$apiSecret);
-        }
-
         return self::$_jwt;
     }
     public static function refreshToken($apiKey, $apiSecret)
