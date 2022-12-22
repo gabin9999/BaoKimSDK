@@ -23,7 +23,7 @@ class Connect {
             $responseMassage = $rs->body->message;
             $dataRespone = [
                 'responseCode' => 01,
-                'responseMessage' => ($responseMassage) ? $responseMassage[0] : ''
+                'responseMessage' => ($responseMassage) ? $responseMassage: ''
             ];
             if ($rs->body->code == 0) {
                 $dataRespone['data']['order_id'] = $rs->body->data->order_id;
